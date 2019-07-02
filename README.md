@@ -77,6 +77,13 @@ Create a file `~/.keras/keras.json` with the contents:
 }
 ```
 
+## Run under docker
+
+```
+docker build . -t rgcn:v1
+docker run -it --name rgcn-container rgcn:v1 /bin/bash
+```
+
 ## Enforcing CPU execution
 
 
