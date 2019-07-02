@@ -1,0 +1,7 @@
+keras==1.2.1
+theano=0.9.0
+pandas
+rdflib
+scipy
+numpy
+tensorflow=0.11
