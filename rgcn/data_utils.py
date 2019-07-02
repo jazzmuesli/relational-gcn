@@ -357,8 +357,8 @@ def parse(symbol):
 
 
 def to_unicode(input):
-    if isinstance(input, unicode):
+    if isinstance(input, str):
         return input
-    elif isinstance(input, str):
+    elif isinstance(input, bytes):
         return input.decode('utf-8', errors='replace')
     return str(input).decode('utf-8', errors='replace')

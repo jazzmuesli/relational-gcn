@@ -136,8 +136,9 @@ def get_splits(y, train_idx, test_idx, validation=True):
     # Make dataset splits
     # np.random.shuffle(train_idx)
     if validation:
-        idx_train = train_idx[len(train_idx) / 5:]
-        idx_val = train_idx[:len(train_idx) / 5]
+        idx=int(len(train_idx) / 5)
+        idx_train = train_idx[idx:]
+        idx_val = train_idx[:idx]
         idx_test = idx_val  # report final score on validation set for hyperparameter optimization
     else:
         idx_train = train_idx
