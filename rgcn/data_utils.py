@@ -287,7 +287,7 @@ def load_data(dataset_str='aifb', limit=-1):
                 print('%d adjacency matrices loaded ' % i)
 
         nodes_u_dict = {np.unicode(to_unicode(key)): val for key, val in
-                        nodes_dict.items()}
+                        nodes_dict.iteritems()}
 
         labels_set = set(labels_df[label_header].values.tolist())
         labels_dict = {lab: i for i, lab in enumerate(list(labels_set))}
